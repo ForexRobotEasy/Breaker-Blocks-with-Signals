@@ -1,0 +1,103 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                                           Breaker Blocks with Signals                                    |
+//|                                                   https://forexroboteasy.com/                                       |
+//|                                                          Forex Robot Easy Team                                         |
+//+------------------------------------------------------------------+
+
+// Define input parameters
+input double swingSensitivity = 0.5; // Sensitivity of detected swings used to construct breaker blocks
+
+// Define global variables
+double premiumLevel; // Premium swing level
+double discountLevel; // Discount swing level
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+   // Initialize premium and discount levels
+   premiumLevel = 0.0;
+   discountLevel = 0.0;
+   
+   return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   // Calculate premium and discount levels
+   CalculateSwingLevels();
+   
+   // Check for breakout signals
+   CheckBreakoutSignals();
+   
+   // Place potential take profit and stop loss levels
+   PlaceTakeProfitStopLossLevels();
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+void CalculateSwingLevels()
+{
+   // Implement logic to calculate premium and discount swing levels
+   // based on the sensitivity parameter and current market conditions
+   // ...
+   // Set premiumLevel and discountLevel variables accordingly
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+void CheckBreakoutSignals()
+{
+   // Implement logic to check for breakout signals between the price
+   // and breaker blocks
+   // ...
+   // If breakout signal is detected, perform necessary actions
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+void PlaceTakeProfitStopLossLevels()
+{
+   // Implement logic to calculate and place potential take profit and
+   // stop loss levels based on premium and discount swing levels
+   // ...
+   // Place take profit and stop loss levels accordingly
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+   // Clean up any resources used by the indicator
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+void OnTester()
+{
+   // Implement testing logic to ensure the code functions as intended
+   // ...
+   // Address any bugs or issues identified during testing
+   // ...
+}
